@@ -1,8 +1,16 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Index from './Index.vue'
+import router from './router'
+
+export const EventService = new Vue();
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+const App = new Vue({
+  router,
+  components: {
+  },
+  render: h => h(Index)
+})
+
+App.$mount('#app')
